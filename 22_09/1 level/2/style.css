@@ -1,0 +1,43 @@
+.clear:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+
+
+
+.container {
+	height: 600px;
+	width: auto;
+	background-color: green;
+	border-radius: 25px;
+	position: absolute;
+}
+
+.left_item	{
+	height: 150px;
+	width: 150px;
+	background-color: yellow;
+	position: relative;
+	border-radius: 25px;
+	float: left;
+}
+.right_area {
+	background-color: red;
+	border-radius: 25px;
+	float: right;
+	height: 300px;
+	margin-left: 700px;
+	margin-top: 150px;
+	position: relative;
+	width: 300px;
+}
+.square {
+	background-color: blue;
+    height: 50px;
+    margin-left: 75px;
+    margin-top: 75px;
+    width: 50px;
+    position: relative;
+}

@@ -1,0 +1,148 @@
+.clearfix::before {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+
+
+
+.container {
+	height: 920px;
+	width: 915px;
+	background-color: green;
+	position: relative;
+}
+.header {
+	background-color: red;
+	height: 125px;
+	margin: 25px 20px;
+	position: absolute;
+	width: 875px;
+}
+.header_items {
+	position: relative;
+	margin: 17px 21px;
+}
+.header_item1, .header_item3 {
+	height: 90px;
+	width: 225px;
+	background-color: blue;
+	display: inline-block;
+}
+.header_item2 {
+	height: 90px;
+	width: 375px;
+	background-color: blue;
+	display: inline-block;
+}
+.it1 {
+	background-color: yellow;
+	height: 30px;
+	width: 190px;
+	margin: 14px 17px;
+
+}
+.it2 {
+	background-color: yellow;
+	height: 25px;
+	width: 190px;
+	margin: -9px 17px;
+
+}
+
+
+
+
+
+
+.navigation {
+	background-color: red;
+	height: 80px;
+	margin-left: 20px;
+	margin-top: 170px;
+	position: absolute;
+	width: 875px;
+}
+.nav {
+	width: 205px;
+	height: 37px;
+	background-color: blue;
+	display: inline-block;
+}
+.navs {
+	margin: 21px 21px;
+}
+
+
+
+
+
+.content {
+	background-color: red;
+	height: 475px;
+	margin-left: 20px;
+	margin-top: 270px;
+	position: absolute;
+	width: 875px;
+}
+.sidebar {
+	width: 210px;
+	height: 415px;
+	background-color: blue;
+	display: inline-block;
+	margin-left: 25px;
+}
+.text {
+	background-color: blue;
+	display: inline-block;
+	height: 415px;
+	margin-left: 28px;
+	margin-top: 30px;
+	width: 585px;
+}
+.textarea1 {
+	 background-color: yellow;
+    height: 305px;
+    margin-left: 22px;
+    margin-top: 20px;
+    width: 540px;
+}
+.textarea2 {
+	background-color: yellow;
+    height: 45px;
+    margin-left: 21px;
+    margin-top: 27px;
+    width: 540px;
+}
+
+
+
+
+
+
+
+
+.footer {
+	 background-color: red;
+    height: 125px;
+    margin: 767px 20px 25px;
+    position: absolute;
+    width: 875px;
+}
+.footer_items {
+	position: relative;
+	margin: 17px 21px;
+}
+.footer_item1, .footer_item3 {
+	height: 90px;
+	width: 225px;
+	background-color: blue;
+	display: inline-block;
+}
+.footer_item2 {
+	height: 90px;
+	width: 375px;
+	background-color: blue;
+	display: inline-block;
+}

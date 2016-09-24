@@ -3,6 +3,7 @@
 		margin-left: auto;
 		margin-right: auto;
 	}
+}
 
 /* Small Devices, Tablets */
 @media only screen and (max-width : 768px) {
@@ -10,3 +11,4 @@
 		margin-left: 0;
 		margin-right: auto;
 	}
+}

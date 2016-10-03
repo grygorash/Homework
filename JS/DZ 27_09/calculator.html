@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Калькулятор</title>
+	<script type="text/javascript">
+		var a = +prompt("Введите первое значение", "0");
+		var c = prompt("Выберите операцыю: +, -, *, /, %", "");
+		var b = +prompt("Введите второе значение", "0");
+		var answer;
+
+		switch (c) {
+
+			case "+":
+			{
+				answer = a + b;
+				alert("Ваш ответ: " + answer);
+			};
+			break;
+			case "-":
+			{
+				answer = a - b;
+				alert("Ваш ответ: " + answer);
+			};
+			break;
+			case "*":
+			{
+				answer = a * b;
+				alert("Ваш ответ: " + answer);
+			};
+			break;
+			case "/":
+			{
+				answer = a / b;
+				alert("Ваш ответ: " + answer);
+			};
+			break;
+			case "%":
+			{
+				answer = a % b;
+				alert("Ваш ответ: " + answer);
+			};
+			break;
+			default:
+			{
+				alert("Вы не ввели операцию");
+			};
+		}
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

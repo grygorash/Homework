@@ -6,29 +6,35 @@
 	<script type="text/javascript">
 
 		var person = {
-			name: "1",
-			sname: "2",
-			age: 3,
+			name: '',
+        	sname: '',
+        	age:''
 		};
-
-		function ask() {
-			name = prompt("Введите свое имя:");
-			sname = prompt("Введите свою фамилию:");
-			age = prompt("Введите свой возраст:");
-		}
-
-		function say() {
-			document.write("Имя: " + name + "<br />");
-			document.write("Фамилия: " + sname + "<br />");
-			document.write("Возраст: " + age + "<br />");
-			document.write("<hr/>");
-		}
-
-		do {
-			ask();
-			say();
-			repeater = confirm("Пройти заполнение еще раз?");
-		} while (repeater);
+		var arr = [];
+        function ask() {
+        	var confirm;
+        	do {
+        		person = {
+        	    	name: prompt("Введите свое имя:"),
+    				sname: prompt("Введите свою фамилию:"),
+    				age: +prompt("Введите свой возраст:")		
+        		};
+    			arr.push(person); 
+    			confirm = prompt("Продолжить?", "yes/no"); 
+        	}
+			while (confirm == 'yes');	
+        };
+        function say() {
+        	var i;
+        	for (i = 0; i < arr.length; i++) {
+        		document.write("Имя: " + arr[i].name + "<br />");
+            	document.write("Фамилия: " + arr[i].sname + "<br />");
+            	document.write("Возраст: " + arr[i].age + "<br />");
+            	document.write("<hr/>");
+        	};
+        };
+        ask();
+        say();
 
 	</script>
 </head>

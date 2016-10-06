@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Object Person</title>
+	<script type="text/javascript">
+
+
+
+		var menuchoise = ("Здравствуйте! Выберите одну из функций: 1. Добавить человека в очередь; 2. Просмотреть весь список добавленных; 3. Удалить человека; 4. Сортировка массива; 5. Выход из программы");
+		var method  = ("Выберите метод сортировки массива: 1. По имени; 2. По количеству языков программирования; 3. По возрасту; 4. Вернуться в главное меню");
+		var arr = [];
+		function defaultpers() {
+			var person = {
+				name: 'Вася',
+				sname: 'Васильев',
+				age:30,
+				sex:'мужской',
+				lang: ['pascal', 'c++']
+			};
+			arr.push(person);
+			var person = {
+				name: 'Петр',
+				sname: 'Петров',
+				age:25,
+				sex:'мужской',
+				lang: ['c++', 'js', 'php',]
+			};
+			arr.push(person);   
+			var person = {
+				name: 'Иван',
+				sname: 'Иванов',
+				age:35,
+				sex:'мужской',
+				lang: ['c++', 'js', 'php', 'ruby', 'phyton']
+			};
+			arr.push(person);       
+			var person = {
+				name: 'Олег',
+				sname: 'Олегов',
+				age:40,
+				sex:'мужской',
+				lang: ['c++', 'js', 'ruby', 'phyton']
+			};
+			arr.push(person); 
+		};
+
+
+
+
+
+
+
+		function menuopt() {
+			var menu = +prompt(menuchoise, '');
+			var nochoise = "Что-то пошло не так, повторите выбор";
+			switch (menu) {
+				case 1:
+				persadd();
+				menuopt();
+				break;
+				case 2:
+				perslist();
+				break;
+				case 3:
+				persdel();
+				menuopt();
+				break;
+				case 4:
+				perssort();
+				menuopt();
+				break;
+				case 5:
+				alert( 'Вы вышли из программы' );
+				break;
+				default:
+				alert(nochoise);
+				menuopt();
+			}; 
+		};
+
+
+
+
+
+		// 1
+		var arr = [];
+		function persadd() {
+			var confirm;
+			do {
+				person = {
+					name: prompt("Введите свое имя:"),
+					sname: prompt("Введите свою фамилию:"),
+					age: +prompt("Введите свой возраст:"),
+					sex: prompt("Введите свой пол ( мужской / женский)"),
+					lang: prompt("Ведите языки программирования (c++, js, php, ruby, phyton) ")		
+				};
+				arr.push(person); 
+				confirm = prompt("Продолжить?", "да/нет"); 
+			}
+			while (confirm == 'да');	
+		};
+
+
+
+
+
+
+        // 2
+        function perslist() {
+        	var i;
+        	var persnumber = i;
+        	for (i = 0; i < arr.length; i++) {
+        		persnumber = i + 1;
+        		document.write("Порядковый номер: " + persnumber + "<br />");
+        		document.write("Имя: " + arr[i].name + "<br />");
+        		document.write("Фамилия: " + arr[i].sname + "<br />");
+        		document.write("Возраст: " + arr[i].age + "<br />");
+        		document.write("Пол: " + arr[i].sex + "<br />");
+        		document.write("Язык(и) программирования: " + arr[i].lang + "<br />");
+        		document.write("<hr/>");        	
+        	};
+        };
+
+
+
+		// 3
+		function persdel() {
+			var del = prompt('Введите имя или индекс человека, которого Вы хотите удалить');
+			var i;
+			for (i = 0; i < arr.length; i++) {
+				if (i == del - 1) {
+					for (element in arr[i]) {
+						delete arr[i][element]; 
+					}
+					arr.splice(i,1);
+					break;
+				}
+				else if (arr[i].name == del) {
+					for (element in arr[i]) {
+						delete arr[i][element]; 
+					};
+					arr.splice(i,1);
+					break;      
+				}                              
+			};
+		};
+
+
+
+
+		// 4
+		function perssort() {
+			var methoda = +prompt(method + " ");
+			var nochoise1 = "Что-то пошло не так, повторите выбор";
+			switch (methoda) {
+				case 1:
+				namesort();
+				menuopt();
+				break;
+				case 2:
+				quantitysort();
+				menuopt();
+				break;
+				case 3:
+				agesort();
+				menuopt();
+				break;
+				case 4:
+				menuopt();
+				default:
+				alert(nochoise1);
+				menuopt();
+			};
+		};
+
+		function namesort() {
+			arr.sort(compareName);
+			function compareName (a, b) {
+				if (a.name > b.name) {
+					return 1;
+				}
+				if (a.name < b.name) {
+					return -1;
+				}
+				return 0;
+			};
+		};
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		function say() {};
+		defaultpers();
+		menuopt();
+
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

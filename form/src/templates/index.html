@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<link lang="de">
+<title>1</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<link rel="stylesheet" href="css/styles.css">
+<script src="js/main.js"></script>
+</head>
+<body>
+	<div class="container hidden">	
+		<div class="row">
+			<div class="col-md-4"></div>
+			<div class="col-md-4">
+				<div id="form">
+					<h3 class="form_title">Заполните форму</h3>
+					<form action="#" method="#" id="contactform" role="form">
+						<div class="form-group ">
+							<label for="contactname"></label>
+							<i class="fa fa-user" aria-hidden="true"></i>
+							<input onkeyup= "this.value=this.value.replace(/[^a-zA-Zа-яА-ЯёЁ .]/, '')" type="text" class="name" id="contactname" placeholder="Ваши ФИО" required>
+						</div>
+						<div class="form-group">
+							<label for="contactemail"></label>
+							<i class="fa fa-envelope" aria-hidden="true"></i>
+							<input type="email" class="form-control" id="contactemail" placeholder="Ваш E-mail" required>
+						</div>
+						<div class="form-group">
+							<label for="contactphone"></label>
+							<i class="fa fa-phone" aria-hidden="true"></i>
+							<input id="contactphone" class="phone_us" placeholder="Ваш телефон" required>
+						</div>
+						<div class="form-group">
+							<label for="contactage"></label>
+							<i class="fa fa-calendar" aria-hidden="true"></i>
+							<input type="" class="date" placeholder="Ваша дата рождения" required>
+						</div>
+						<div class="form-group">
+							<button type="submit">Отправить</button>
+							<button type="reset" class="error" >Отмена</button>
+						</div>
+					</form>
+				</div>
+			</div>
+			<div class="col-md-4"></div>
+		</div>
+	</div>
+	<button type="submit" class="call"><a href="#form" class="popup" >Форма</a></button>
+</body>
+</html>

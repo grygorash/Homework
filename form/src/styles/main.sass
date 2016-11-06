@@ -1,0 +1,91 @@
+.clr 
+	overflow: auto
+	zoom: 1
+
+
+#form
+	background-color: #eee
+	padding: 20px
+	border: 1px solid #48A0E0
+	margin: auto
+	max-width: 320px
+	h3
+		margin: 20px auto
+		text-align: center
+		font-size: 20px
+	input
+		margin-bottom: 20px
+		outline: none
+		width: 100%
+		border-radius: 4px
+		border: 2px solid #eee
+		padding-left: 35px
+		height: 40px
+		position: relative
+		&:focus
+			border-color: #48A0E0
+	button
+		margin-bottom: 2px	
+		margin-top: 0
+		display: inline-block
+		width: auto
+		background-color: #48A0E0
+		border: none
+		color: white
+		border-radius: 4px
+		padding: 10px 20px
+		border-bottom: 2px solid #3b77a2
+		border-right: 2px solid #3b77a2
+		margin-left: 18px
+		&:hover
+			background-color: lighten(#48A0E0, 7%)
+		&:active
+			background-color: #3b77a2
+			margin-top: 2px
+			margin-bottom: 0
+	.error
+		padding: 10px 29px
+		background-color: #e86060
+		border-bottom: 2px solid #e34141
+		border-right: 2px solid #e34141
+		&:hover
+			background-color: lighten(#e86060, 7%)
+		&:active
+			background-color: darken(#e86060, 7%)
+			margin-top: 2px
+			margin-bottom: 0
+	.name
+		text-transform: capitalize
+	.fa
+		position: absolute
+		z-index: 1
+		font-size: 20px
+		margin-top: 10px
+		margin-left: 10px
+		color: #48a0e0
+	.fa-phone
+		font-size: 22px
+	.fa-envelope
+		font-size: 18px
+.mfp-close
+	display: none
+
+.call
+	background-color: #48A0E0
+	padding: 10px 20px
+	text-align: center
+	display: block
+	margin: 0 auto
+	margin-top: 20px
+	border-radius: 4px
+	border-bottom: 2px solid #3b77a2
+	border-right: 2px solid #3b77a2
+	&:hover
+		background-color: lighten(#48A0E0, 7%)
+	&:active
+		background-color: #3b77a2
+		margin-top: 22px
+		margin-bottom: 0
+	a
+		color: white
+		text-decoration: none
